@@ -16,7 +16,9 @@ CUG-Hydro-Skills 是 CUG-Hydro 研究组用于分享和开发 Claude Code LLM Sk
 ## 仓库结构
 
 ```
-skills/          # 自定义技能 (repomix-gh)
+.claude-plugin/
+  plugin.json    # Plugin 配置（定义 skills 和 agents 路径）
+skills/          # 自定义技能 (repomix-gh, code-simplify)
 agents/          # 自定义代理 (code-reviewer)
 rules/           # 编码规则，按语言/领域分类
   common/        # 通用规则 (可复现性、伦理)
@@ -79,23 +81,22 @@ bash skills/repomix-gh/src/repomix-gh.sh owner/repo --force
 
 参见 `examples/hook-demo/`，了解文件修改时自动触发代码审查的示例。
 
-## 新项目配置
+## 安装方式
 
-在新项目中使用这些技能：
+### 方式 1：作为 Plugin 安装（推荐）
 
-```powershell
-mkdir .claude
-mklink /J ".claude\skills" "%CD%\skills"
+```bash
+# 本地开发模式
+claude --plugin-dir /path/to/CUG-Hydro-Skills
+
+# 或安装到项目
+claude plugin install cug-hydro-skills@cug-marketplace --scope project
 ```
 
-或在 `.claude/settings.json` 中配置：
+### 方式 2：符号链接（开发调试）
 
-```json
-{
-  "skillsPaths": ["./skills"],
-  "agentsPaths": ["./agents"],
-  "memory": {
-    "files": ["./AGENTS.md"]
-  }
-}
+```powershell
+# Windows
+mklink /J ".claude\skills" "path\to\CUG-Hydro-Skills\skills"
+mklink /J ".claude\agents" "path\to\CUG-Hydro-Skills\agents"
 ```

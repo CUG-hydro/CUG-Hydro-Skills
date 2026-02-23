@@ -10,16 +10,16 @@ description: GitHub 仓库打包工具（gh + zip download，默认 lean 模式�
 
 ```bash
 # Lean 模式（默认，排除测试和多语言文档）
-bash github-helper/src/repomix-gh.sh affaan-m/everything-claude-code
+bash src/repomix-gh.sh affaan-m/everything-claude-code
 
 # Full 模式（包含所有文件）
-bash github-helper/src/repomix-gh.sh affaan-m/everything-claude-code output.md --full
+bash src/repomix-gh.sh affaan-m/everything-claude-code output.md --full
 ```
 
 ## 用法
 
 ```bash
-bash github-helper/src/repomix-gh.sh owner/repo [output.md] [--force] [--full]
+bash src/repomix-gh.sh owner/repo [output.md] [--force] [--full]
 ```
 
 ### 参数说明
@@ -35,16 +35,16 @@ bash github-helper/src/repomix-gh.sh owner/repo [output.md] [--force] [--full]
 
 ```bash
 # 基本用法（默认 lean 模式）
-bash github-helper/src/repomix-gh.sh jl-pkgs/StrategicRandomSearch.jl
+bash src/repomix-gh.sh jl-pkgs/StrategicRandomSearch.jl
 
 # 指定输出文件
-bash github-helper/src/repomix-gh.sh Deltares/Wflow.jl Wflow.md
+bash src/repomix-gh.sh Deltares/Wflow.jl Wflow.md
 
 # Full 模式（包含所有文件）
-bash github-helper/src/repomix-gh.sh affaan-m/everything-claude-code ecc.md --full
+bash src/repomix-gh.sh affaan-m/everything-claude-code ecc.md --full
 
 # 强制更新缓存
-bash github-helper/src/repomix-gh.sh owner/repo output.md --force
+bash src/repomix-gh.sh owner/repo output.md --force
 ```
 
 ## 输出示例
@@ -144,4 +144,4 @@ A: 直接再次运行，使用缓存，无需重新下载
 
 ## 参考资料
 
-详见 [REFERENCES.md](github-helper/REFERENCES.md)
+详见 [Config.md](Config.md)
