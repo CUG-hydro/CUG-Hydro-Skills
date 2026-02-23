@@ -1,11 +1,10 @@
 ---
+name: repomix-gh
 argument-hint: <owner/repo> [output.md] [--force] [--full]
 description: GitHub 仓库打包工具（gh + zip download，默认 lean 模式）
 ---
 
-# repomix-gh
-
-GitHub 仓库打包工具，使用 gh + zip download 快速生成 LLM 可学习的单文件文档。
+> GitHub 仓库打包工具，使用 gh + zip download 快速生成 LLM 可学习的单文件文档。
 
 ## 快速开始
 

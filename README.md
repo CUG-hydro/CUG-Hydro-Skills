@@ -1,32 +1,22 @@
 <h1>CUG-Hydro-Skills</h1>
-> CUG-Hydro研究组LLM Skills
+
+> CUG-Hydro研究组：分享与开发 LLM Skills
+
+```powershell
+# 创建目录连接（不需要管理员权限）
+mkdir .claude
+mklink /J ".claude\skills" "%CD%\skills"
+```
+
+## Skills读取顺序  <!-- omit in toc -->
+
+### 1 Claude <!-- omit in toc -->
+
+```bash
+~/.claude/skills/
+.claude/skills/
+```
+
+
 
 ## 1 github-helper
-
-- 学习单个文件，例如<https://github.com/jl-pkgs/StrategicRandomSearch.jl/blob/main/src/SRS.jl>
-
-- 学习repo，借助`repomix`
-
-    > 改工具可让LLM快速、完整的学会一个Github repo。
-
-    在线copy配置命令，<https://repomix.com/>
-
-    *格式*:
-    ```bash
-    npx repomix --remote 'https://github.com/{own}/{repo}' -o {repo}.md --style markdown --output-show-line-numbers --ignore '.github, .vscode, .gitignore'
-    ```
-
-    *示例*:    
-    ```bash
-    npx repomix --remote 'https://github.com/jl-pkgs/StrategicRandomSearch.jl' -o StrategicRandomSearch.md --style markdown --output-show-line-numbers --ignore '.github, .vscode, .gitignore'
-    ```
-    
-    > 其他常用参数：`--no-file-summary`
-    大型repo，优先下载zip；不要使用github
-    
-- github `gh`
-
-    安装
-
-npx repomix --remote 'https://github.com/Deltares/Wflow.jl' --style markdown --output-show-line-numbers --no-file-summary --ignore '.github'
-

@@ -16,6 +16,10 @@ function kimi-claude {
 function zai-claude {
     $env:ANTHROPIC_AUTH_TOKEN=$env:KEY_ZAI
     $env:ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/anthropic"
+    # $env:ANTHROPIC_DEFAULT_HAIKU_MODEL="glm-5"
+    $env:ANTHROPIC_DEFAULT_SONNET_MODEL="glm-4.7"
+    $env:ANTHROPIC_DEFAULT_OPUS_MODEL="glm-5"
+    
     claude @Args
 } 
 ```
