@@ -10,7 +10,7 @@
                 "hooks": [
                     {
                         "type": "command",
-                        "command": "bash /z/GitHub/cug-hydro/CUG-Hydro-Skills/.claude/hooks/session-info.sh"
+                        "command": "bash .claude/hooks/session-info.sh"
                     }
                 ]
             }
@@ -21,11 +21,20 @@
                 "hooks": [
                     {
                         "type": "command",
-                        "command": "bash /z/GitHub/cug-hydro/CUG-Hydro-Skills/.claude/hooks/block-rm.sh"
+                        "command": "bash .claude/hooks/block-rm.sh"
                     },
                     {
                         "type": "command",
-                        "command": "bash /z/GitHub/cug-hydro/CUG-Hydro-Skills/.claude/hooks/bash-logger.sh"
+                        "command": "bash .claude/hooks/bash-logger.sh"
+                    }
+                ]
+            },
+            {
+                "matcher": "Edit|Write",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash .claude/hooks/linux-minimalism.sh"
                     }
                 ]
             }
@@ -35,7 +44,7 @@
                 "hooks": [
                     {
                         "type": "command",
-                        "command": "bash /z/GitHub/cug-hydro/CUG-Hydro-Skills/.claude/hooks/stop-info.sh"
+                        "command": "bash .claude/hooks/stop-info.sh"
                     }
                 ]
             }

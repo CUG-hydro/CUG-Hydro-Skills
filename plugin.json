@@ -2,6 +2,6 @@
   "name": "cug-hydro-skills",
   "version": "1.0.0",
   "description": "CUG-Hydro 研究组的 Claude Code 技能集合，包含 repomix-gh 和 code-simplify",
-  "skills": "../skills",
-  "agents": "../agents"
+  "skills": "./skills",
+  "agents": "./agents"
 }
