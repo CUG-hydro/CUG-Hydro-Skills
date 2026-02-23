@@ -3,3 +3,7 @@ test-*.md
 *.md~
 
 achieve
+backup
+
+log
+*log*

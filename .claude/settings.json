@@ -1,3 +1,59 @@
 {
-  "skillsPaths": ["./skills"]
+    "skillsPaths": [
+        "./skills"
+    ],
+    "agentsPaths": [
+        "./agents"
+    ],
+    "memory": {
+        "files": [
+        ]
+    },
+    "hooks": {
+        "SessionStart": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash /z/GitHub/cug-hydro/CUG-Hydro-Skills/.claude/hooks/session-info.sh"
+                    }
+                ]
+            }
+        ],
+        "ConfigChange": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash /z/GitHub/cug-hydro/CUG-Hydro-Skills/.claude/hooks/session-info.sh"
+                    }
+                ]
+            }
+        ],
+        "PreToolUse": [
+            {
+                "matcher": "Bash",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash /z/GitHub/cug-hydro/CUG-Hydro-Skills/.claude/hooks/block-rm.sh"
+                    },
+                    {
+                        "type": "command",
+                        "command": "bash /z/GitHub/cug-hydro/CUG-Hydro-Skills/.claude/hooks/bash-logger.sh"
+                    }
+                ]
+            }
+        ],
+        "Stop": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash /z/GitHub/cug-hydro/CUG-Hydro-Skills/.claude/hooks/stop-info.sh"
+                    }
+                ]
+            }
+        ]
+    }
 }

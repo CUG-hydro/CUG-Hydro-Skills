@@ -22,4 +22,15 @@ function zai-claude {
     
     claude @Args
 } 
+
+function min-claude {
+    $env:ANTHROPIC_AUTH_TOKEN=$env:KEY_MINIMAX
+    $env:ANTHROPIC_BASE_URL="https://api.minimaxi.com/anthropic"
+    # $env:ANTHROPIC_DEFAULT_HAIKU_MODEL="glm-5"
+    $env:ANTHROPIC_DEFAULT_SONNET_MODEL="MiniMax-M2.5-highspeed"
+    $env:ANTHROPIC_DEFAULT_OPUS_MODEL="MiniMax-M2.5"
+    
+    claude @Args
+}
+
 ```
