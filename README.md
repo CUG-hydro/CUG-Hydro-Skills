@@ -2,19 +2,19 @@
 
 > CUG-Hydro研究组：分享与开发 LLM Skills
 
-- `claude-code`使用与配置教程：[](docs/ClaudeCode-llms.txt)
+## Skills  <!-- omit in toc -->
 
-## Skills读取顺序  <!-- omit in toc -->
-
-### 1 Claude <!-- omit in toc -->
+**读取顺序**
 
 ```bash
 ~/.claude/skills/
 .claude/skills/
 ```
 
-```powershell
-# 创建目录连接（不需要管理员权限）
+**开发模式**
+
+```bash
+# cmd 创建目录连接（不需要管理员权限）
 mkdir .claude
-mklink /J ".claude\skills" "%CD%\skills"
+mklink /J ".claude\skills" "skills"
 ```

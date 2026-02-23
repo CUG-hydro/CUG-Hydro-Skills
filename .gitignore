@@ -5,5 +5,5 @@ test-*.md
 achieve
 backup
 
-log
 *log*
+.claude/skills
